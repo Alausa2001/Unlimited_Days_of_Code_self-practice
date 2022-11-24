@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head id="he">tested<br></head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <a href="javascript:void(0);" onclick="appendList();">Append items</a>
+    <ol class="append"></ol>
+
+<script type="text/javascript">
+function appendList() 
+{
+    var item1 = "<li>No 1</li>";
+    var item2 = $("<li></li>").text('No 2');
+    var item3 = document.createElement('li');
+    item3.innerHTML = "No 3";
+    $(".append").append(item1, item2, item3);
+    }
+    
+</script>
+<a href="javascript:void(0);" onclick="AppendItemsToList();">Append items</a>   
+<ol id="olTestList2"></ol>
+
+<script type="text/javascript">
+function AppendItemsToList()
+{
+	var item1 = $("<li></li>").text("Item 1");
+	var item2 = "<li>Item 2</li>";
+	var item3 = document.createElement("li");
+	item3.innerHTML = "Item 3";
+	
+	$("#olTestList2").append(item1, item2, item3);
+}
+</script>
+</body>
+</html>
